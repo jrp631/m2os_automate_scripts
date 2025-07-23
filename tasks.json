@@ -1,0 +1,65 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "1.0.0",
+    "tasks": [
+        {
+            "label": "m2os-build (no tool) 🛠️Ⓜ️2️⃣",
+            "type": "shell",
+            "command": "cd ~/UC/M2OS ; make clean; make install_no_tool"
+        },
+        {
+          "label": "m2os-build stack info 🛠️Ⓜ️2️⃣ 📚",
+          "type": "shell",
+          "command": "cd ~/UC/M2OS ; make clean; make stack_data"
+      },
+        {
+            "label": "compile-and-flash 🛠️🖥️",
+            "type": "shell",
+            "command": "./.vscode/compile-and-flash.sh",
+            "args": [
+                "${file}"
+            ]
+        },
+        {
+            "label" : "compile-c-file 🔨",
+            "type" : "shell",
+            "command" : "./.vscode/compile-c-file.sh",
+            "args": [
+                "${file}"
+            ]
+        },
+        {
+          "label" : "compile-c-all 🛠️",
+            "type" : "shell",
+            "command" : "./.vscode/compile-c-file.sh",
+            "args": [
+                "${file}",
+                "all"
+            ]
+        },
+        {
+            "label" : "flash-bin 🖥️",
+            "type" : "shell",
+            "command" : "./.vscode/flash-bin.sh",
+            "args": [
+                "${file}"
+            ]
+        },
+        {
+          "label" : "clean-dir 🧹",
+            "type" : "shell",
+            "command" : "./.vscode/clean.sh",
+            "args": [
+                "${fileDirname}"
+            ]
+        },
+        {
+          "label": "run-test-and-redirect 🧪",
+          "type": "shell",
+          "command": "./.vscode/run-test-and-redirect.sh",
+          "args": [
+              "${file}"
+          ]
+        },        
+}
