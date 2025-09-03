@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+title: "m2os_automate_scripts"
+authors:
+  - family-names: "Juan Romón Peña"
+    given-names: ""
+date-released: "2024-06-10"
+repository-code: "https://github.com/jrp631/m2os_automate_scripts"
+version: "1.0.0"
+license: "MIT"
